@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/apps.css" />
+  <link rel="stylesheet" href="css/news.css" />
+  <link rel="stylesheet" href="css/toolkit.css" />
+  <link rel="stylesheet" href="css/resources.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet">
+  <script defer src="js/script.js"></script>
+  <script defer src="js/dashboard.js"></script>
+  <script defer src="js/apps.js"></script>
+  <script defer src="js/news.js"></script>
+  <script defer src="js/toolkit.js"></script>
+  <script defer src="js/resources.js"></script>
+  <script defer src="js/settings.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="layout-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-top">
+        <a class="sidebar-logo" href="../index.html" aria-label="Go to homepage">
+          <img src="images/Logo on Transparent Background 150px.png" alt="Black Room Intelligence" />
+        </a>
+
+        <nav class="sidebar-nav" aria-label="Primary">
+          <a href="#dashboard-content" class="nav-link is-active" data-target="dashboard-content">
+            <i class="fa fa-tachometer-alt" aria-hidden="true"></i>
+            <span>Home</span>
+          </a>
+
+          <a href="#apps-content" class="nav-link" data-target="apps-content">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            <span>Apps</span>
+          </a>
+
+          <a href="#news-content" class="nav-link" data-target="news-content">
+            <i class="fa fa-newspaper" aria-hidden="true"></i>
+            <span>News Feed</span>
+          </a>
+
+          <a href="#ioc-content" class="nav-link" data-target="ioc-content">
+            <i class="fa fa-wrench" aria-hidden="true"></i>
+            <span>IOC Toolkit</span>
+          </a>
+
+          <a href="#resources-content" class="nav-link" data-target="resources-content">
+            <i class="fa fa-folder-open" aria-hidden="true"></i>
+            <span>Resources</span>
+          </a>
+
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <a href="#settings-content" class="nav-link nav-link--settings" data-target="settings-content">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+          <span>Settings</span>
+        </a>
+      </div>
+
+      <button class="sidebar-toggle" type="button" aria-label="Collapse sidebar">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </button>
+    </aside>
+
+    <!-- Profile -->
+    <div class="profile-container">
+      <button class="profile-btn" type="button" aria-label="Open profile menu">
+        <img src="images/logo-door.png" alt="Profile picture" class="profile-pic">
+        
+      </button>
+
+      <div class="profile-dropdown" role="menu" aria-label="Profile menu">
+        <a href="#home" class="dropdown-item" role="menuitem">Home</a>
+        <a href="#account" class="dropdown-item" role="menuitem">Account</a>
+        <a href="#logout" class="dropdown-item dropdown-item--logout" role="menuitem">Logout</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Page Content -->
+  <main class="page-content">
+    <!-- Dashboard Page -->
+    <div id="dashboard-content" class="content-section">
+      <section class="home-hero">
+        <div class="home-hero__content">
+          <div class="home-hero__badge">
+            <span class="dot"></span>
+            Internal Analyst Portal
+          </div>
+
+          <h1 class="home-hero__title">Open Source Intelligence, ready in one click.</h1>
+
+          <p class="home-hero__subtitle">
+            Launch vetted open-source tools instantly and stay updated with curated threat intel feeds — all inside one
+            workspace.
+          </p>
+
+          <div class="home-hero__actions">
+            <button class="btn btn-primary" type="button" data-open-tab="apps-content">
+              Explore Apps
+            </button>
+
+            <button class="btn btn-secondary" type="button" data-open-tab="news-content">
+              Open News Feed
+            </button>
+          </div>
+        </div>
+
+        <div class="home-hero__stats">
+          <div class="stat-card">
+            <p class="stat-card__label">Apps Available</p>
+            <p class="stat-card__value">12</p>
+          </div>
+
+          <div class="stat-card">
+            <p class="stat-card__label">Feeds Tracked</p>
+            <p class="stat-card__value">8</p>
+          </div>
+
+          <div class="stat-card">
+            <p class="stat-card__label">Status</p>
+            <p class="stat-card__value stat-card__value--live">Live</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="apps-content" class="content-section">
+      <section class="apps-header">
+        <div class="apps-header__text">
+          <h1 class="apps-title">App Collection</h1>
+          <p class="apps-subtitle">
+            All tools are available to run locally. Click <strong>Run Locally</strong> for Docker steps, or
+            <strong>Details</strong> for usage guidance.
+          </p>
+        </div>
+
+        <div class="apps-controls">
+          <div class="apps-search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" id="appsSearch" placeholder="Search apps" />
+          </div>
+
+          <div class="apps-filters" role="group" aria-label="App filters">
+            <button type="button" class="chip is-active" data-filter="all">All</button>
+            <button type="button" class="chip" data-filter="clearnet">Clear Net</button>
+            <button type="button" class="chip" data-filter="darknet">Dark Net</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clear Net -->
+      <section class="apps-section" data-section="clearnet">
+        <div class="apps-section__head">
+          <h3 class="apps-section__title">Clear Net Tools</h3>
+          <p class="apps-section__hint">OSINT, recon, scanning, and intelligence tooling.</p>
+        </div>
+
+        <div class="apps-grid">
+          <!-- SpiderFoot -->
+          <article class="app-card" data-app="spiderfoot" data-type="clearnet" data-name="spiderfoot osint">
+            <div class="app-card__top">
+              <img src="images/spiderfoot-logo.png" alt="SpiderFoot Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">SpiderFoot</h4>
+            <p class="app-card__desc">Automated OSINT tool to gather intelligence from online sources for profiling and
+              threat analysis.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="spiderfoot">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="spiderfoot">Details</button>
+            </div>
+          </article>
+
+          <!-- Sherlock -->
+          <article class="app-card" data-app="sherlock" data-type="clearnet" data-name="sherlock username osint">
+            <div class="app-card__top">
+              <img src="images/sherlock-logo.png" alt="Sherlock Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">Sherlock</h4>
+            <p class="app-card__desc">Username search tool that locates accounts across multiple platforms to support
+              investigations.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="sherlock">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="sherlock">Details</button>
+            </div>
+          </article>
+
+          <!-- MISP -->
+          <article class="app-card" data-app="misp" data-type="clearnet" data-name="misp threat intel">
+            <div class="app-card__top">
+              <img src="images/misp-logo.png" alt="MISP Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">MISP</h4>
+            <p class="app-card__desc">Threat intelligence sharing platform for storing and distributing indicators and
+              related context.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="misp">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="misp">Details</button>
+            </div>
+          </article>
+
+          <!-- Social Analyzer -->
+          <article class="app-card" data-app="social-analyzer" data-type="clearnet"
+            data-name="social analyzer osint usernames">
+            <div class="app-card__top">
+              <img src="images/social-analyzer-logo.png" alt="Social Analyzer Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">Social Analyzer</h4>
+            <p class="app-card__desc">Multi-platform OSINT framework for tracking usernames, gathering data, and
+              analyzing profiles.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="social-analyzer">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="social-analyzer">Details</button>
+            </div>
+          </article>
+
+          <!-- Shodan CLI -->
+          <article class="app-card" data-app="shodan" data-type="clearnet" data-name="shodan cli exposed devices">
+            <div class="app-card__top">
+              <img src="images/shodan-logo.png" alt="Shodan Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">Shodan CLI</h4>
+            <p class="app-card__desc">Query Shodan from the command line to find exposed devices, services, and
+              vulnerabilities.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="shodan">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="shodan">Details</button>
+            </div>
+          </article>
+
+          <!-- Osmedeus -->
+          <article class="app-card" data-app="osmedeus" data-type="clearnet" data-name="osmedeus recon automation">
+            <div class="app-card__top">
+              <img src="images/osmedeus-logo.png" alt="Osmedeus Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">Osmedeus</h4>
+            <p class="app-card__desc">Automated reconnaissance framework for mapping attack surfaces and scanning
+              targets.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="osmedeus">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="osmedeus">Details</button>
+            </div>
+          </article>
+
+          <!-- Recon-ng -->
+          <article class="app-card" data-app="reconng" data-type="clearnet"
+            data-name="recon-ng reconnaissance framework">
+            <div class="app-card__top">
+              <img src="images/reconng-logo.png" alt="Recon-ng Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">Recon-ng</h4>
+            <p class="app-card__desc">Recon framework for automating web-based information gathering and OSINT
+              workflows.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="reconng">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="reconng">Details</button>
+            </div>
+          </article>
+
+          <!-- Nmap -->
+          <article class="app-card" data-app="nmap" data-type="clearnet" data-name="nmap network mapper scanning">
+            <div class="app-card__top">
+              <img src="images/nmap-logo.png" alt="Nmap Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">Nmap</h4>
+            <p class="app-card__desc">Network discovery and security auditing tool to identify hosts, services, and
+              exposures.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="nmap">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="nmap">Details</button>
+            </div>
+          </article>
+
+          <!-- OpenVAS -->
+          <article class="app-card" data-app="openvas" data-type="clearnet"
+            data-name="openvas greenbone vulnerability scanner">
+            <div class="app-card__top">
+              <img src="images/openvas-logo.png" alt="OpenVAS Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">OpenVAS</h4>
+            <p class="app-card__desc">Vulnerability scanner for identifying security issues across networks, hosts, and
+              services.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="openvas">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="openvas">Details</button>
+            </div>
+          </article>
+
+          <!-- Censys CLI -->
+          <article class="app-card" data-app="censys" data-type="clearnet" data-name="censys cli internet scanning">
+            <div class="app-card__top">
+              <img src="images/censys-logo.png" alt="Censys Logo" class="app-card__logo" />
+              <span class="tag tag-clearnet">Clear Net</span>
+            </div>
+            <h4 class="app-card__title">Censys CLI</h4>
+            <p class="app-card__desc">CLI access to Censys datasets for internet-wide scanning to discover exposed
+              services.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="censys">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="censys">Details</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Dark Net -->
+      <section class="apps-section" data-section="darknet">
+        <div class="apps-section__head">
+          <h3 class="apps-section__title">Dark Net Tools</h3>
+          <p class="apps-section__hint">Privacy and dark web research tools (use responsibly).</p>
+        </div>
+
+        <div class="apps-grid">
+          <article class="app-card" data-app="tor" data-type="darknet" data-name="tor browser darknet">
+            <div class="app-card__top">
+              <img src="images/tor-logo.png" alt="Tor Browser Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">Tor Browser</h4>
+            <p class="app-card__desc">Anonymous browser for accessing .onion sites and protecting user identity and
+              traffic.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="tor">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="tor">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="ahmia" data-type="darknet" data-name="ahmia search onion">
+            <div class="app-card__top">
+              <img src="images/ahmia-logo.png" alt="Ahmia Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">Ahmia</h4>
+            <p class="app-card__desc">Search engine for indexing .onion sites and making dark web content discoverable.
+            </p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="ahmia">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="ahmia">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="onion-search" data-type="darknet" data-name="onion search tor">
+            <div class="app-card__top">
+              <img src="images/onion-search-logo.png" alt="Onion Search Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">Onion Search</h4>
+            <p class="app-card__desc">Tool for locating hidden services via Tor-compatible engines and .onion indexing.
+            </p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="onion-search">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="onion-search">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="darksearch" data-type="darknet" data-name="darksearch darknet search">
+            <div class="app-card__top">
+              <img src="images/darksearch-logo.png" alt="DarkSearch Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">DarkSearch</h4>
+            <p class="app-card__desc">Dark web search engine wrapper to locate hidden marketplaces, forums, and
+              services.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="darksearch">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="darksearch">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="hunchly" data-type="darknet"
+            data-name="hunchly web capture investigations">
+            <div class="app-card__top">
+              <img src="images/hunchly-logo.png" alt="Hunchly Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">Hunchly</h4>
+            <p class="app-card__desc">Web capture and investigation tool for documenting research and maintaining case
+              files.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="hunchly">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="hunchly">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="tails" data-type="darknet" data-name="tails os live operating system">
+            <div class="app-card__top">
+              <img src="images/tailos-logo.png" alt="Tails OS Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">Tails OS</h4>
+            <p class="app-card__desc">Live operating system for anonymous browsing and privacy-focused investigation
+              setups.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="tails">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="tails">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="onionscan" data-type="darknet" data-name="onionscan onion analysis">
+            <div class="app-card__top">
+              <img src="images/onionscan-logo.png" alt="OnionScan Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">OnionScan</h4>
+            <p class="app-card__desc">Tool for analyzing and mapping hidden services for exposures and
+              misconfigurations.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="onionscan">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="onionscan">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="whonix" data-type="darknet" data-name="whonix privacy tor virtualization">
+            <div class="app-card__top">
+              <img src="images/whonix-logo.png" alt="Whonix Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">Whonix</h4>
+            <p class="app-card__desc">Privacy-focused OS using Tor + virtualization for safer browsing and separation of
+              risk.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="whonix">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="whonix">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="darkdump" data-type="darknet" data-name="darkdump scraping onion">
+            <div class="app-card__top">
+              <img src="images/darkdump-logo.png" alt="DarkDump Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">DarkDump</h4>
+            <p class="app-card__desc">Dark web scraping tool for gathering intelligence from hidden services and .onion
+              domains.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="darkdump">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="darkdump">Details</button>
+            </div>
+          </article>
+
+          <article class="app-card" data-app="cryptonote" data-type="darknet"
+            data-name="cryptonote encrypted communication">
+            <div class="app-card__top">
+              <img src="images/cryptonote-logo.png" alt="CryptoNote Logo" class="app-card__logo" />
+              <span class="tag tag-darknet">Dark Net</span>
+            </div>
+            <h4 class="app-card__title">CryptoNote</h4>
+            <p class="app-card__desc">Encrypted communications tooling concept for handling sensitive info and secure
+              sharing.</p>
+            <div class="app-card__actions">
+              <button type="button" class="btn btn-primary btn-sm" data-run="cryptonote">Run Locally</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-details="cryptonote">Details</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Modal (shared for Run/Details) -->
+      <div class="modal" id="appsModal" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="App modal">
+          <div class="modal__header">
+            <h4 id="appsModalTitle">App</h4>
+            <button type="button" class="modal__close" data-modal-close aria-label="Close">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+
+          <div class="modal__body" id="appsModalBody"></div>
+
+          <div class="modal__footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="news-content" class="content-section">
+      <section class="news-header-top">
+        <div class="news-header-top__text">
+          <h1 class="news-title">News Feeder</h1>
+          <p class="news-subtitle">
+            Add RSS feeds to build a personal threat intel stream. Click an article to view details.
+          </p>
+        </div>
+
+        <div class="news-actions">
+          <button type="button" class="btn btn-primary btn-sm" id="openAddRss">
+            + Add RSS Feed
+          </button>
+        </div>
+      </section>
+
+      <section class="news-layout">
+        <!-- Left: Feeds -->
+        <aside class="feeds-panel">
+          <div class="panel-head">
+            <h4 class="panel-title">Your Feeds</h4>
+            <p class="panel-sub">Tab Manager</p>
+          </div>
+
+          <div id="feedsList" class="feeds-list">
+            <!-- populated by JS -->
+          </div>
+
+          <div class="panel-foot">
+            <p class="tiny-muted">
+              Tip: Add reputable sources first. You can remove feeds at any time.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right: Articles -->
+        <div class="articles-panel">
+          <div class="articles-head">
+            <h3 class="articles-title">Latest Articles</h3>
+
+            <div class="articles-tools">
+              <div class="news-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="newsSearch" type="text" placeholder="Search articles..." />
+              </div>
+
+              <button type="button" class="btn btn-secondary btn-sm" id="refreshFeeds">
+                Refresh
+              </button>
+            </div>
+          </div>
+
+          <div id="newsList" class="news-list">
+            <!-- populated by JS -->
+          </div>
+
+          <div id="newsEmpty" class="empty-state" style="display:none;">
+            <h4>No articles yet</h4>
+            <p>Add an RSS feed to start building your stream.</p>
+            <button type="button" class="btn btn-primary btn-sm" id="openAddRss2">+ Add RSS Feed</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add RSS Modal -->
+      <div class="modal" id="rssModal" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close="rss"></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="Add RSS feed">
+          <div class="modal__header">
+            <h4>Add a New RSS Feed</h4>
+            <button type="button" class="modal__close" data-modal-close="rss" aria-label="Close">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+
+          <div class="modal__body">
+            <div class="modal-section">
+              <div class="modal-section__title">RSS URL</div>
+              <p>Paste the feed URL below. We’ll pull the latest items and add them to your stream.</p>
+
+              <form id="rssForm" class="rss-form" autocomplete="off">
+                <label class="sr-only" for="rssUrl">RSS Feed URL</label>
+                <input type="url" id="rssUrl" placeholder="https://example.com/feed.xml" required />
+                <button type="submit" class="btn btn-primary btn-sm">Add Feed</button>
+              </form>
+
+              <p class="tiny-muted" style="margin-top:10px;">
+                Note: Some feeds block public readers. If a feed fails, try another source.
+              </p>
+            </div>
+
+            <div class="modal-section">
+              <div class="modal-section__title">Example feeds</div>
+              <div class="example-feeds">
+                <button type="button" class="example-feed" data-example-feed="https://www.bleepingcomputer.com/feed/">
+                  BleepingComputer
+                </button>
+                <button type="button" class="example-feed" data-example-feed="https://krebsonsecurity.com/feed/">
+                  Krebs on Security
+                </button>
+                <button type="button" class="example-feed" data-example-feed="https://www.cisa.gov/news.xml">
+                  CISA News
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal__footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-modal-close="rss">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Modal -->
+      <div class="modal" id="articleModal" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close="article"></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="Article details">
+          <div class="modal__header">
+            <h4 id="articleTitle">Article</h4>
+            <button type="button" class="modal__close" data-modal-close="article" aria-label="Close">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+
+          <div class="modal__body" id="articleBody">
+            <!-- populated by JS -->
+          </div>
+
+          <div class="modal__footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-modal-close="article">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- IOC TOOLKIT PAGE -->
+    <div id="ioc-content" class="content-section">
+      <div class="ioc-head">
+        <div>
+          <h1>IOC Toolkit</h1>
+          <p>
+            Quick internal utilities for investigation workflows. Everything runs locally in the browser.
+          </p>
+        </div>
+      </div>
+
+      <div class="ioc-grid">
+        <!-- Hash Identifier -->
+        <button type="button" class="ioc-card" data-tool="hash">
+          <div class="ioc-card-top">
+            <div class="ioc-icon"><i class="fa fa-hashtag"></i></div>
+            <div class="ioc-type">Utility</div>
+          </div>
+          <div class="ioc-title">Hash Identifier</div>
+          <div class="ioc-desc">Detect common hash types (MD5, SHA1, SHA256) by length/pattern.</div>
+          <div class="ioc-tag">Hashes</div>
+        </button>
+
+        <!-- Base64 -->
+        <button type="button" class="ioc-card" data-tool="base64">
+          <div class="ioc-card-top">
+            <div class="ioc-icon"><i class="fa fa-exchange"></i></div>
+            <div class="ioc-type">Utility</div>
+          </div>
+          <div class="ioc-title">Base64 Encode / Decode</div>
+          <div class="ioc-desc">Quickly encode or decode strings (safe client-side).</div>
+          <div class="ioc-tag">Encoding</div>
+        </button>
+
+        <!-- Timestamp -->
+        <button type="button" class="ioc-card" data-tool="timestamp">
+          <div class="ioc-card-top">
+            <div class="ioc-icon"><i class="fa fa-clock"></i></div>
+            <div class="ioc-type">Utility</div>
+          </div>
+          <div class="ioc-title">Timestamp Converter</div>
+          <div class="ioc-desc">Convert Unix timestamps to readable time and back.</div>
+          <div class="ioc-tag">Time</div>
+        </button>
+
+        <!-- URL Decoder -->
+        <button type="button" class="ioc-card" data-tool="url">
+          <div class="ioc-card-top">
+            <div class="ioc-icon"><i class="fa fa-link"></i></div>
+            <div class="ioc-type">Utility</div>
+          </div>
+          <div class="ioc-title">URL Decode / Encode</div>
+          <div class="ioc-desc">Decode % encoded URLs or encode plain strings safely.</div>
+          <div class="ioc-tag">Web</div>
+        </button>
+
+        <!-- Indicator Normaliser -->
+        <button type="button" class="ioc-card" data-tool="normalise">
+          <div class="ioc-card-top">
+            <div class="ioc-icon"><i class="fa fa-magic"></i></div>
+            <div class="ioc-type">Utility</div>
+          </div>
+          <div class="ioc-title">IOC Normaliser</div>
+          <div class="ioc-desc">Defang/fang indicators and clean formatting quickly.</div>
+          <div class="ioc-tag">IOCs</div>
+        </button>
+
+        <!-- Regex Tester (lite) -->
+        <button type="button" class="ioc-card" data-tool="regex">
+          <div class="ioc-card-top">
+            <div class="ioc-icon"><i class="fa fa-code"></i></div>
+            <div class="ioc-type">Utility</div>
+          </div>
+          <div class="ioc-title">Regex Tester</div>
+          <div class="ioc-desc">Test a regex pattern against sample text (client-side).</div>
+          <div class="ioc-tag">Text</div>
+        </button>
+      </div>
+
+      <!-- TOOL MODAL -->
+      <div class="modal" id="iocModal" aria-hidden="true">
+        <div class="modal__backdrop" data-ioc-close="true"></div>
+
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="IOC Toolkit Tool">
+          <div class="modal__header">
+            <h4 id="iocModalTitle">Tool</h4>
+            <button type="button" class="modal__close" data-ioc-close="true" aria-label="Close">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+
+          <div class="modal__body">
+            <p class="modal-text" id="iocModalDesc"></p>
+
+            <!-- Dynamic tool content -->
+            <div id="iocModalContent"></div>
+
+            <div class="ioc-modal-actions">
+              <button type="button" class="btn btn-secondary btn-sm" data-ioc-close="true">Close</button>
+            </div>
+
+            <p class="tiny-muted">Note: outputs are not uploaded or stored.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="resources-content" class="content-section">
+      <div class="resources-head">
+        <div>
+          <h1>Resources</h1>
+          <p>
+            Templates, brand assets, internal guides, and shared materials. Click a folder to explore.
+          </p>
+        </div>
+      </div>
+
+      <div class="resources-breadcrumbs" id="resourcesBreadcrumbs">
+        <button type="button" class="crumb-btn" id="resourcesHomeCrumb">
+          <i class="fa fa-home"></i>
+          <span>Resources</span>
+        </button>
+
+        <span class="crumb-sep" id="crumbSep" style="display:none;">/</span>
+        <div class="crumb-trail" id="resourcesCrumbTrail"></div>
+      </div>
+
+      <div class="resources-panel">
+        <div class="resources-toolbar">
+          <div class="resources-count" id="resourcesCount">0 items</div>
+
+          <div class="resources-actions">
+            <button type="button" class="btn btn-secondary btn-sm" id="resourcesBackBtn" disabled>
+              <i class="fa fa-arrow-left"></i> Back
+            </button>
+          </div>
+        </div>
+
+        <div class="resources-grid" id="resourcesGrid"></div>
+      </div>
+
+      <!-- Resource modal -->
+      <div class="modal" id="resourceModal" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close="resource"></div>
+
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="Resource details">
+          <div class="modal__header">
+            <h4 id="resourceModalTitle">Resource</h4>
+
+            <button type="button" class="modal__close" data-modal-close="resource" aria-label="Close">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+
+          <div class="modal__body">
+            <p class="modal-text" id="resourceModalDesc">Description</p>
+
+            <div class="resource-meta" id="resourceMeta"></div>
+
+            <!-- FIXED BUTTON AREA -->
+            <div class="resource-modal-actions">
+              <a class="btn btn-primary btn-sm" id="resourceDownloadBtn" href="#" download>
+                <i class="fa fa-download"></i> Download
+              </a>
+
+              <button type="button" class="btn btn-secondary btn-sm" data-modal-close="resource">
+                Close
+              </button>
+            </div>
+
+            <p class="tiny-muted">
+              Tip: keep file names consistent for quick internal sharing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="settings-content" class="content-section">
+      <section class="settings-head">
+        <div>
+          <h1 class="settings-title">Account Settings</h1>
+          <p class="settings-subtitle">
+            Manage your profile details and update your password. Changes are backend-ready.
+          </p>
+        </div>
+      </section>
+
+      <section class="settings-grid">
+        <!-- Profile Card -->
+        <div class="settings-card">
+          <div class="settings-card__head">
+            <h3 class="settings-card__title">Profile</h3>
+            <p class="settings-card__sub">Your account information (read-only until edit).</p>
+          </div>
+
+          <div class="settings-card__body">
+            <div class="field-row">
+              <div class="field">
+                <label for="settingsFullName">Full name</label>
+                <input type="text" id="settingsFullName" value="John Doe" disabled />
+              </div>
+
+              <div class="field">
+                <label for="settingsEmail">Email address</label>
+                <input type="email" id="settingsEmail" value="john.doe@example.com" disabled />
+              </div>
+            </div>
+
+            <div class="settings-actions">
+              <button type="button" class="btn btn-secondary btn-sm" id="editNameBtn">
+                Edit name
+              </button>
+
+              <button type="button" class="btn btn-primary btn-sm" id="saveNameBtn" disabled>
+                Save changes
+              </button>
+
+              <button type="button" class="btn btn-secondary btn-sm" id="cancelNameBtn" style="display:none;">
+                Cancel
+              </button>
+            </div>
+
+            <div class="notice" id="profileNotice" style="display:none;"></div>
+          </div>
+        </div>
+
+        <!-- Security Card -->
+        <div class="settings-card">
+          <div class="settings-card__head">
+            <h3 class="settings-card__title">Security</h3>
+            <p class="settings-card__sub">Update your password securely.</p>
+          </div>
+
+          <div class="settings-card__body">
+            <form id="changePasswordForm" class="settings-form" autocomplete="off">
+              <div class="field">
+                <label for="oldPassword">Old password</label>
+                <div class="input-wrap">
+                  <input type="password" id="oldPassword" required />
+                  <button type="button" class="eye-btn" data-toggle="oldPassword"
+                    aria-label="Toggle password visibility">
+                    <i class="fa fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="newPassword">New password</label>
+                  <div class="input-wrap">
+                    <input type="password" id="newPassword" required />
+                    <button type="button" class="eye-btn" data-toggle="newPassword"
+                      aria-label="Toggle password visibility">
+                      <i class="fa fa-eye"></i>
+                    </button>
+                  </div>
+                  <p class="field-hint">Min 8 chars, include a number and a symbol.</p>
+                </div>
+
+                <div class="field">
+                  <label for="confirmPassword">Confirm new password</label>
+                  <div class="input-wrap">
+                    <input type="password" id="confirmPassword" required />
+                    <button type="button" class="eye-btn" data-toggle="confirmPassword"
+                      aria-label="Toggle password visibility">
+                      <i class="fa fa-eye"></i>
+                    </button>
+                  </div>
+                  <p class="field-hint" id="matchHint" style="display:none;"></p>
+                </div>
+              </div>
+
+              <div class="settings-actions">
+                <button type="submit" class="btn btn-primary btn-sm" id="updatePasswordBtn">
+                  Update password
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" id="clearPasswordBtn">
+                  Clear
+                </button>
+              </div>
+
+              <div class="notice" id="passwordNotice" style="display:none;"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+
+
+
+
+  </main>
+
+</body>
+
+</html>

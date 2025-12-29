@@ -1,0 +1,199 @@
+/* Resources Tab ---------------------------------------------------------------------------------------------------------- */
+
+#resources-content{
+    padding-top: 10px;
+  }
+  
+  .resources-head h1{
+    margin-bottom: 12px;
+  }
+  
+  .resources-head p{
+    color: var(--muted);
+    line-height: 1.7rem;
+    max-width: 900px;
+  }
+  
+  /* Breadcrumbs */
+  .resources-breadcrumbs{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: rgba(255,255,255,0.03);
+  }
+  
+  .crumb-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: var(--r-sm);
+    padding: 8px 10px;
+  }
+  
+  .crumb-btn:hover{
+    background: rgba(255,255,255,0.04);
+  }
+  
+  .crumb-sep{
+    color: rgba(255,255,255,0.45);
+  }
+  
+  .crumb-trail{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .crumb-link{
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: var(--r-sm);
+    font-weight: 700;
+  }
+  
+  .crumb-link:hover{
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
+  }
+  
+  /* Panel */
+  .resources-panel{
+    margin-top: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: rgba(255,255,255,0.03);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  
+  .resources-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .resources-count{
+    color: rgba(255,255,255,0.70);
+    font-weight: 700;
+  }
+  
+  .resources-grid{
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  /* Folder + file cards */
+  .resource-card{
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: rgba(0,0,0,0.25);
+    padding: 14px;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 120px;
+  }
+  
+  .resource-card:hover{
+    transform: translateY(-2px);
+    border-color: var(--border-2);
+    background: rgba(255,255,255,0.04);
+  }
+  
+  .resource-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .resource-icon{
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.15);
+    color: var(--orange);
+    font-size: 18px;
+  }
+  
+  .resource-type{
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    font-weight: 800;
+  }
+  
+  .resource-name{
+    font-weight: 900;
+    font-size: 1.05rem;
+    line-height: 1.35rem;
+  }
+  
+  .resource-desc{
+    color: rgba(255,255,255,0.65);
+    line-height: 1.35rem;
+    font-size: 0.95rem;
+    flex: 1;
+  }
+  
+  /* Little tag (not pill/999px) */
+  .resource-tag{
+    align-self: flex-start;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    padding: 6px 8px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 800;
+    background: rgba(0,0,0,0.12);
+  }
+  
+  /* Modal add-on */
+  .resource-meta{
+    margin: 12px 0 0 0;
+    padding: 10px;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.18);
+    color: rgba(255,255,255,0.72);
+    line-height: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1200px){
+    .resources-grid{ grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 900px){
+    .resources-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px){
+    .resources-grid{ grid-template-columns: 1fr; }
+  }
+  
+
+
+  

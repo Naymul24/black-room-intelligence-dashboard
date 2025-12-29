@@ -1,0 +1,193 @@
+/* IOC TOOLKIT ---------------------------------------------------------------------------------------------------------- */
+
+#ioc-content{
+    padding-top: 10px;
+  }
+  
+  .ioc-head p{
+    color: var(--muted);
+    line-height: 1.7rem;
+    max-width: 900px;
+  }
+  
+  .ioc-grid{
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .ioc-card{
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: rgba(255,255,255,0.03);
+    padding: 14px;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 140px;
+    text-align: left;
+  }
+  
+  .ioc-card:hover{
+    transform: translateY(-2px);
+    border-color: var(--border-2);
+    background: rgba(255,255,255,0.04);
+  }
+  
+  .ioc-card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .ioc-icon{
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.15);
+    color: var(--orange);
+    font-size: 18px;
+  }
+  
+  .ioc-type{
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    font-weight: 800;
+  }
+  
+  .ioc-title{
+    font-weight: 900;
+    font-size: 1.08rem;
+    line-height: 1.35rem;
+    color: white;
+  }
+  
+  .ioc-desc{
+    color: rgba(255,255,255,0.65);
+    line-height: 1.35rem;
+    font-size: 0.95rem;
+    flex: 1;
+  }
+  
+  .ioc-tag{
+    align-self: flex-start;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    padding: 6px 8px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 800;
+    background: rgba(0,0,0,0.12);
+  }
+  
+  /* Modal content for tools */
+  .ioc-tool{
+    margin-top: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: rgba(0,0,0,0.18);
+    padding: 12px;
+  }
+  
+  .ioc-row{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .ioc-input, .ioc-textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.25);
+    color: var(--text);
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .ioc-textarea{
+    min-height: 140px;
+    resize: vertical;
+  }
+  
+  .ioc-input:focus, .ioc-textarea:focus{
+    border-color: rgba(229,144,41,0.35);
+    box-shadow: 0 0 0 3px rgba(229,144,41,0.12);
+  }
+  
+  .ioc-btn{
+    border: none;
+    border-radius: var(--r-sm);
+    padding: 10px 12px;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    min-width: 160px;
+  }
+  
+  .ioc-btn-primary{
+    background: var(--orange);
+    color: #000;
+  }
+  
+  .ioc-btn-primary:hover{
+    filter: brightness(0.95);
+  }
+  
+  .ioc-btn-ghost{
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  
+  .ioc-btn-ghost:hover{
+    background: rgba(255,255,255,0.04);
+    border-color: var(--border-2);
+  }
+  
+  .ioc-output{
+    margin-top: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: rgba(0,0,0,0.18);
+    padding: 12px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6rem;
+    word-break: break-word;
+  }
+  
+  .ioc-output code{
+    color: rgba(255,255,255,0.92);
+    font-weight: 800;
+  }
+  
+  .ioc-modal-actions{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1100px){
+    .ioc-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 650px){
+    .ioc-grid{ grid-template-columns: 1fr; }
+  }
+  

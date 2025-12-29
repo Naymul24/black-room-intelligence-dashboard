@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRI Analyst Portal | Reset Password</title>
+
+    <link rel="stylesheet" href="/account/password-reset/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Ysabeau+Office:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="auth">
+      <section class="auth-card">
+        <div class="auth-brand">
+          <div class="brand-mark">
+            <img src="/dashboard/images/Logo on Transparent Background 150px.png" alt="Black Room Intelligence" />
+          </div>
+
+          <h1 class="auth-title">Reset Password</h1>
+          <p class="auth-subtitle">
+            Create a new password for your account. This link may expire for security.
+          </p>
+        </div>
+
+        <!-- Backend-ready: token errors, success, etc -->
+        <div class="auth-alert" id="resetAlert" style="display:none;"></div>
+
+        <form id="resetPasswordForm" class="auth-form" novalidate>
+          <div class="field">
+            <label for="newPassword">New password</label>
+            <div class="input-wrap">
+              <input
+                type="password"
+                id="newPassword"
+                name="newPassword"
+                placeholder="Enter new password"
+                autocomplete="new-password"
+                required
+              />
+              <button
+                type="button"
+                class="icon-btn"
+                data-toggle="newPassword"
+                aria-label="Toggle password visibility"
+              >
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+            <p class="field-hint">Min 8 chars, include a number and a symbol.</p>
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Confirm new password</label>
+            <div class="input-wrap">
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm new password"
+                autocomplete="new-password"
+                required
+              />
+              <button
+                type="button"
+                class="icon-btn"
+                data-toggle="confirmPassword"
+                aria-label="Toggle password visibility"
+              >
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+            <p class="field-hint" id="matchHint" style="display:none;"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submitResetBtn">
+            Reset password
+          </button>
+
+          <a class="btn btn-secondary" id="backToLoginBtn" href="../login/index.html" style="margin-top:8px;">
+            Back to login
+          </a>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

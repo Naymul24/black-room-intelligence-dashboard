@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRI Analyst Portal | Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Ysabeau+Office:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="auth">
+      <section class="auth-card">
+        <div class="auth-brand">
+          <div class="brand-mark">
+            <img src="/dashboard/images/Logo on Transparent Background 150px.png" alt="Black Room Intelligence" />
+          </div>
+
+          <h1 class="auth-title">Analyst Portal Login</h1>
+
+          <!-- Updated subtitle + demo access -->
+          <p class="auth-subtitle">
+            Staff login is for internal users.
+            <br />
+            <span style="color: rgba(255,255,255,0.55);">
+              Want to explore the portal?
+            </span>
+            <button type="button" class="link-btn" id="openDemoAccess" style="margin-left:6px;">
+              Enter demo mode
+            </button>
+          </p>
+        </div>
+
+        <!-- Backend-ready: errors go here -->
+        <div class="auth-alert" id="authAlert" style="display:none;"></div>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="name@company.com"
+              autocomplete="username"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+
+            <div class="input-wrap">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+              <button
+                type="button"
+                class="icon-btn"
+                id="togglePassword"
+                aria-label="Toggle password visibility"
+              >
+                <i class="fa fa-eye"></i>
+              </button>
+            </div>
+
+            <div class="field-row">
+              <label class="remember">
+                <input type="checkbox" id="rememberMe" />
+                Remember me
+              </label>
+
+              <button type="button" class="link-btn" id="openForgotPassword">
+                Forgot password?
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="loginBtn">
+            Login
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal" id="forgotModal" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close="forgot"></div>
+
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="Reset password">
+        <div class="modal__header">
+          <h4>Reset Password</h4>
+          <button type="button" class="modal__close" data-modal-close="forgot" aria-label="Close">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+
+        <div class="modal__body">
+          <p class="modal-text">
+            Enter your work email. If it exists, you’ll receive a reset link.
+          </p>
+
+          <div class="auth-alert" id="resetAlert" style="display:none;"></div>
+
+          <form id="forgotForm" class="modal-form" novalidate>
+            <div class="field">
+              <label for="resetEmail">Work email</label>
+              <input
+                type="email"
+                id="resetEmail"
+                name="resetEmail"
+                placeholder="name@company.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="modal-actions">
+              <button type="submit" class="btn btn-primary" id="resetBtn">
+                Send reset link
+              </button>
+              <button type="button" class="btn btn-secondary" data-modal-close="forgot">
+                Cancel
+              </button>
+            </div>
+          </form>
+
+          <p class="tiny-muted">
+            If you don’t receive anything, check spam or contact your admin.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

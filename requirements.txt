@@ -1,0 +1,207 @@
+adblockparser==0.7
+aiohappyeyeballs==2.6.1
+aiohttp==3.12.2
+aiosignal==1.3.2
+annotated-types==0.7.0
+antlr4-python3-runtime==4.9.3
+anyio==4.9.0
+attrs==23.2.0
+autocommand==2.2.2
+Automat==22.10.0
+azure-common==1.1.28
+azure-core==1.29.7
+azure-identity==1.15.0
+azure-keyvault-secrets==4.7.0
+backports.tarfile==1.1.1
+bcrypt==4.1.3
+beautifulsoup4==4.12.3
+blinker==1.7.0
+boltons @ file:///Users/ec2-user/ci_py311/boltons_1678396074811/work
+brotlipy==0.7.0
+cachetools==5.3.3
+certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_2emnmf1qow/croot/certifi_1690232232440/work/certifi
+cffi @ file:///Users/ec2-user/ci_py311/cffi_1678315312775/work
+chardet==5.2.0
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+cheroot==10.0.1
+CherryPy==18.9.0
+cherrypy-cors==1.7.0
+click==8.1.7
+colorama==0.4.6
+conda @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_7e8aa3u3i8/croot/conda_1696257482148/work
+conda-content-trust @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_3dvkcnnrtu/croot/conda-content-trust_1693490624887/work
+conda-libmamba-solver @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_79xy9y1e9n/croot/conda-libmamba-solver_1696257536186/work/src
+conda-package-handling @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_99vcqjo8cf/croot/conda-package-handling_1690999935230/work
+conda_package_streaming @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_d5wg6eonuu/croot/conda-package-streaming_1690987980119/work
+constantly==23.10.4
+cryptography==3.4.8
+Cython==3.0.10
+datefinder==0.7.3
+Deprecated==1.2.14
+deprecation==2.1.0
+distlib==0.3.8
+dnspython==2.6.1
+eql==0.9.19
+et-xmlfile==1.1.0
+ExifRead==2.3.2
+exrex==0.11.0
+filelock==3.14.0
+filigran-sseclient==1.0.1
+Flask==3.0.1
+flask-cors==5.0.1
+Flask-Mail==0.10.0
+frozenlist==1.6.0
+future==1.0.0
+galeodes==0.7
+gotrue==2.12.0
+greenlet==3.0.3
+gunicorn==23.0.0
+h11==0.16.0
+h2==4.2.0
+honeypots==0.65
+hpack==4.1.0
+httpagentparser==1.9.5
+httpcore==1.0.9
+httpx==0.28.1
+hyperframe==6.1.0
+hyperlink==21.0.0
+idna @ file:///Users/ec2-user/ci_py311/idna_1678315819133/work
+impacket==0.9.24
+importlib-metadata==6.11.0
+incremental==22.10.0
+inflect==7.2.1
+iniconfig==2.1.0
+ipaddr==2.2.0
+ipwhois==1.1.0
+isodate==0.6.1
+itsdangerous==2.1.2
+jaraco.collections==5.0.1
+jaraco.context==5.3.0
+jaraco.functools==4.0.1
+jaraco.text==3.12.0
+Jinja2==3.1.3
+jsonpatch==1.33
+jsonpointer==2.1
+langdetect==1.0.9
+lark-parser==0.12.0
+ldap3==2.9.1
+ldapdomaindump==0.9.4
+libmambapy @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_b1ly10g547/croot/mamba-split_1694187772608/work/libmambapy
+lxml==4.9.4
+Mako==1.3.3
+MarkupSafe==2.1.5
+more-itertools==10.2.0
+msal==1.26.0
+msal-extensions==1.1.0
+multidict==6.4.4
+netaddr==0.10.1
+netifaces==0.11.0
+networkx==2.6.3
+numpy==1.26.1
+openpyxl==3.0.10
+opentelemetry-api==1.22.0
+opentelemetry-exporter-prometheus==0.43b0
+opentelemetry-sdk==1.22.0
+opentelemetry-semantic-conventions==0.43b0
+outcome==1.3.0.post0
+packaging @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_2algm5p9lp/croot/packaging_1693575178038/work
+pandas==2.1.1
+paramiko==3.1.0
+parsuricata==0.4.1
+phonenumbers==8.13.36
+pika==1.3.2
+pillow==10.3.0
+platformdirs==4.2.1
+pluggy==1.6.0
+ply==3.11
+plyara==2.1.1
+portalocker==2.8.2
+portend==3.2.0
+postgrest==1.0.2
+progressbar2==4.4.2
+prometheus_client==0.20.0
+propcache==0.3.1
+psutil==5.9.0
+psycopg2==2.9.9
+psycopg2-binary==2.9.3
+publicsuffixlist==0.10.0.20240515
+pyasn1==0.6.0
+pyasn1_modules==0.4.0
+pycosat @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_09anpuxx5u/croot/pycosat_1696536514697/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pycryptodome==3.19.0
+pycryptodomex==3.20.0
+pycti @ git+https://github.com/OpenCTI-Platform/client-python.git@0312625927ecc939c2a244b69cb31162d4163528
+pydantic==2.11.5
+pydantic_core==2.33.2
+pygexf==0.2.2
+PyJWT==2.10.1
+pymisp==2.4.190
+PyNaCl==1.5.0
+pyodbc==5.0.1
+pyOpenSSL==21.0.0
+PyPDF2==1.28.6
+PySocks @ file:///Users/ec2-user/ci_py311/pysocks_1678315868424/work
+pytest==8.3.5
+pytest-mock==3.14.1
+python-dateutil==2.9.0.post0
+python-docx==0.8.11
+python-dotenv==1.1.0
+python-json-logger==2.0.7
+python-magic==0.4.27
+python-pptx==0.6.23
+python-utils==3.8.2
+python-whois==0.7.3
+pytz==2023.3.post1
+PyYAML==6.0.1
+realtime==2.4.3
+regex==2024.5.10
+requests==2.28.2
+requests-futures==1.0.1
+ruamel.yaml @ file:///Users/ec2-user/ci_py311/ruamel.yaml_1678379291841/work
+scapy==2.4.5
+secure==0.3.0
+selenium==4.22.0
+service-identity==21.1.0
+sigmatools==0.23.1
+simplejson==3.19.2
+six==1.16.0
+sniffio==1.3.1
+social-analyzer==0.45
+sortedcontainers==2.4.0
+soupsieve==2.5
+SQLAlchemy==2.0.25
+stem==1.8.2
+stix2==3.0.1
+stix2-patterns==2.0.0
+storage3==0.11.3
+StrEnum==0.4.15
+stripe==12.0.0
+supabase==2.15.2
+supafunc==0.9.4
+tempora==5.5.1
+termcolor==2.4.0
+tld==0.13
+torrequest==0.1.0
+tqdm @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_03acd6t6ca/croot/tqdm_1679561866522/work
+trio==0.25.1
+trio-websocket==0.11.1
+truststore @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_d4qy09ztdt/croot/truststore_1695244322396/work
+Twisted==21.7.0
+typeguard==4.2.1
+typing-inspection==0.4.1
+typing_extensions==4.13.2
+tzdata==2023.3
+urllib3 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1968zekhce/croot/urllib3_1686163172153/work
+virtualenv==20.26.1
+websocket-client==1.8.0
+websockets==14.2
+Werkzeug==3.0.1
+wrapt==1.16.0
+wsproto==1.2.0
+XlsxWriter==3.2.0
+yarl==1.20.0
+zc.lockfile==3.0.post1
+zipp==3.18.1
+zope.interface==6.4
+zstandard @ file:///Users/ec2-user/ci_py311_2/zstandard_1679338593428/work

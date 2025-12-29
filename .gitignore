@@ -1,0 +1,16 @@
+# Env files
+.env
+backend/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+backend/venv/
+backend/.venv/
+
+# macOS junk
+.DS_Store
+._*
